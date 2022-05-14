@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Acme&display=swap");
+@import "src/app/core/styles/utilities.scss";
+
+html {
+	font-size: 12px;
+}
+
+body {
+	font-size: 1.5rem;
+	margin: 0;
+	font-family: "Open Sans";
+}
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "node_modules/ngx-bootstrap/datepicker/bs-datepicker";

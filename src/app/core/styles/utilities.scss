@@ -1,0 +1,16 @@
+a.inherit {
+	color: inherit;
+	text-decoration: inherit;
+
+	&:hover {
+		color: inherit;
+	}
+}
+
+.p-dropdown {
+	width: 100% !important;
+}
+
+// .p-inputtext-lg {
+// 	width: 100%;
+// }

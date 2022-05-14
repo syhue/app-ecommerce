@@ -1,0 +1,27 @@
+.search-bar {
+}
+
+.p-input-icon-right {
+	width: 100%;
+	height: 100%;
+
+	input {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+:host ::ng-deep .p-dropdown {
+	border-bottom-right-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+}
+
+:host ::ng-deep input.p-inputtext {
+	border-left-style: none;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+
+	&:focus {
+		border-left-style: none;
+	}
+}

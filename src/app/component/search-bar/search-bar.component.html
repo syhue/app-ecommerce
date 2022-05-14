@@ -1,0 +1,11 @@
+<div class="search-bar w-100 row">
+	<div class="col-4 px-0">
+		<p-dropdown [options]="cities" [(ngModel)]="selectedCity" optionLabel="name" class="w-100"></p-dropdown>
+	</div>
+	<div class="col-8 px-0">
+		<span class="p-input-icon-right">
+			<i class="pi pi-search"></i>
+			<input type="text" pInputText [(ngModel)]="searchValue" class="p-inputtext">
+		</span>
+	</div>
+</div>
