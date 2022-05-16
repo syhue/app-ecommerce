@@ -3,7 +3,7 @@
 	"version": 1,
 	"newProjectRoot": "projects",
 	"projects": {
-		"app-ecommercep": {
+		"app-ecommerce": {
 			"projectType": "application",
 			"schematics": {
 				"@schematics/angular:component": {
@@ -87,7 +87,7 @@
 				"extract-i18n": {
 					"builder": "@angular-devkit/build-angular:extract-i18n",
 					"options": {
-						"browserTarget": "app-ecommercp:build"
+						"browserTarget": "app-ecommerce:build"
 					}
 				},
 				"test": {
