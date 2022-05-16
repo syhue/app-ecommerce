@@ -20,7 +20,7 @@
 				"build": {
 					"builder": "@angular-devkit/build-angular:browser",
 					"options": {
-						"outputPath": "docs",
+						"outputPath": "docs/app-ecommerce",
 						"index": "src/index.html",
 						"main": "src/main.ts",
 						"polyfills": "src/polyfills.ts",
@@ -76,10 +76,10 @@
 					"builder": "@angular-devkit/build-angular:dev-server",
 					"configurations": {
 						"production": {
-							"browserTarget": "app-ecommercp:build:production"
+							"browserTarget": "app-ecommerce:build:production"
 						},
 						"development": {
-							"browserTarget": "app-ecommercp:build:development"
+							"browserTarget": "app-ecommerce:build:development"
 						}
 					},
 					"defaultConfiguration": "development"
