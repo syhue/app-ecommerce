@@ -33,9 +33,18 @@
 						"styles": [
 							"node_modules/bootstrap/dist/css/bootstrap.min.css",
 							"node_modules/primeicons/primeicons.css",
-							"node_modules/primeng/resources/themes/mdc-light-deeppurple/theme.css",
 							"node_modules/primeng/resources/primeng.min.css",
-							"src/styles.scss"
+							"src/styles.scss",
+							{
+								"input": "src/light-mode.css",
+								"bundleName": "light",
+								"inject": false
+							},
+							{
+								"input": "src/dark-mode.css",
+								"bundleName": "dark",
+								"inject": false
+							}
 						],
 						"scripts": []
 					},

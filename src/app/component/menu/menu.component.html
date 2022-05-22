@@ -1,12 +1,12 @@
 <div class="menu-wrapper">
 	<div class="menu top-menu d-flex align-items-center justify-content-between">
-		<div class="left-menu">
-			<div class="primary-400">
+		<div class="d-flex">
+			<div class="me-5">
 				<a href="#" target="_blank" rel="noopener noreferrer" class="inherit">
-					Chat with us
+					About Us
 				</a>
 			</div>
-			<div>
+			<div class="me-5">
 				<a href="tel:+0143278298" target="_blank" class="inherit">
 					+6014 3278298
 				</a>
@@ -18,29 +18,28 @@
 			</div>
 		</div>
 
-		<div class="right-menu">
-			<div class="primary-400">
-				<a href="#" target="_blank" rel="noopener noreferrer" class="inherit">
-					Blog
-				</a>
-			</div>
-			<div class="primary-400">
-				<a href="#" target="_blank" rel="noopener noreferrer" class="inherit">
-					About Us
-				</a>
-			</div>
+		<div class="dark-mode" (click)="toggleThemeMode()">
+			<span class="me-3">Dark Mode</span>
+			<p-inputSwitch class="p-inputswitch" [(ngModel)]="isDarkMode"></p-inputSwitch>
 		</div>
 	</div>
 
-	<div class="menu middle-menu row justify-content-between">
-		<div class="logo col-2">
+	<div class="menu middle-menu row justify-content-between align-items-center">
+		<div class="logo col-lg-2">
 			CoderLG
 		</div>
-		<div class="col-6">
+		<div class="col-lg-6">
 			<app-search-bar></app-search-bar>
 		</div>
-		<div class="col-2">
-
+		<div class="col-lg-1 d-flex justify-content-end">
+			<div class="profile me-4">
+				<i class="pi pi-user"></i>
+			</div>
+			<div class="cart">
+				<i class="pi pi-shopping-cart"></i>
+				<div class="notification-circle">0
+				</div>
+			</div>
 		</div>
 
 	</div>

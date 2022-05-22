@@ -1,49 +1,122 @@
+$padding-inline-width: 6rem;
+$top-menu-height: 4rem;
+
 .menu-wrapper {
 	width: 100%;
-	color: var(--gray-900);
 	font-weight: 400;
 	line-height: 1.3rem;
+}
 
-	.menu {
-		width: calc(100% - 8rem);
-		margin-inline: 4rem;
-	}
+.menu {
+	width: calc(100% - $padding-inline-width * 2);
+	margin-inline: $padding-inline-width;
+}
 
-	.top-menu {
-		height: 4rem;
-		border-bottom: 1px solid var(--gray-200);
-		box-sizing: border-box;
+.top-menu {
+	height: $top-menu-height;
+	padding-top: 0.5rem;
+	border-bottom: 1px solid var(--gray-200);
+	box-sizing: border-box;
+	color: var(--primary-600);
 
-		.left-menu {
-			display: flex;
+	a {
+		position: relative;
+		padding-inline: 5px;
 
-			div {
-				margin-right: 3rem;
-			}
+		&::before {
+			content: " ";
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			inset: 0 0 0 0;
+			background-color: var(--primary-100);
+			z-index: -1;
+			transition: transform 0.3s ease;
+			opacity: 1;
 		}
 
-		.right-menu {
-			display: flex;
+		&:hover::before {
+			transform: scaleX(1);
+			transform-origin: bottom left;
+		}
 
-			div {
-				margin-left: 3rem;
-			}
+		&::before {
+			transform: scaleX(0);
+			transform-origin: bottom right;
+		}
+	}
+}
+
+.middle-menu {
+	margin: 3.33rem $padding-inline-width;
+	height: 4.167rem;
+
+	.logo {
+		font-size: 4rem;
+		line-height: 4.167rem;
+		font-weight: 600;
+		font-family: "Acme", sans-serif;
+		cursor: pointer;
+		transition-property: all;
+		transition-duration: 200ms;
+
+		&:hover {
+			transform: scale(1.15);
+			color: var(--primary-700);
 		}
 	}
 
-	.middle-menu {
-		margin: 3.33rem 4rem;
-		height: 4.167rem;
+	.profile,
+	.cart {
+		cursor: pointer;
 
-		.logo {
-			font-size: 4rem;
-			line-height: 3.5rem;
-			font-weight: 600;
-			font-family: "Acme", sans-serif;
+		i {
+			font-size: 1.7rem;
+		}
+
+		&:hover {
+			transform: scale(1.1);
 		}
 	}
 
-	.primary-400 {
-		color: var(--primary-400);
+	.cart {
+		position: relative;
+
+		.notification-circle {
+			width: auto;
+			min-width: 1.2rem;
+			height: 1.3rem;
+			background-color: var(--red-500);
+			border-radius: 50%;
+			position: absolute;
+			bottom: -0.2rem;
+			left: -0.3rem;
+			padding-inline: 4px;
+			text-align: center;
+
+			// text vertical align
+			line-height: 1.3rem;
+			font-size: 0.9rem;
+			color: white;
+			font-weight: 500;
+		}
 	}
+}
+
+.primary-500 {
+	color: var(--primary-500);
+}
+
+.dark-mode {
+	color: var(--text-color);
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+
+.p-inputswitch {
+	z-index: -1 !important;
 }
