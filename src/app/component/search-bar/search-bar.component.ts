@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { SelectModel } from 'src/app/component/search-bar/select.model';
 
 @Component({
@@ -8,20 +8,15 @@ import { SelectModel } from 'src/app/component/search-bar/select.model';
 })
 export class SearchBarComponent implements OnInit {
 
-	cities = [
-		{ name: 'New York', code: 'NY' },
-		{ name: 'Rome', code: 'RM' },
-		{ name: 'London', code: 'LDN' },
-		{ name: 'Istanbul', code: 'IST' },
-		{ name: 'Paris', code: 'PRS' }
-	];
-	selectedCity: SelectModel;
+	@Input() option: SelectModel[];
+	@Input() selectedOption: SelectModel;
+	@Input() placeholder: string;
 	searchValue: string = '';
-
 
 	constructor() { }
 
 	ngOnInit(): void {
+		this.selectedOption = this.selectedOption || this.option[0];
 	}
 
 }

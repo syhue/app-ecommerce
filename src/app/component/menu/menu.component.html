@@ -29,7 +29,7 @@
 			CoderLG
 		</div>
 		<div class="col-lg-6">
-			<app-search-bar></app-search-bar>
+			<app-search-bar [option]="mainCategoriesOptions"></app-search-bar>
 		</div>
 		<div class="col-lg-1 d-flex justify-content-end">
 			<div class="profile me-4">
@@ -42,5 +42,12 @@
 			</div>
 		</div>
 
+	</div>
+
+
+	<div class="categories-menu">
+		<ng-container *ngFor="let option of categoriesOptions | keyvalue">
+			<p-dropdown [options]="option.value" optionLabel="name" class="submenu-dropdown"></p-dropdown>
+		</ng-container>
 	</div>
 </div>

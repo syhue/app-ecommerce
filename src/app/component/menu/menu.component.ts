@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { SelectModel } from 'src/app/component/search-bar/select.model';
+import { Categories } from 'src/app/core/Model/categories.model';
+import { DropdownService } from 'src/app/core/services/dropdown.service';
 import { ThemeService } from 'src/app/core/services/theme.service';
 
 @Component({
@@ -8,12 +11,31 @@ import { ThemeService } from 'src/app/core/services/theme.service';
 })
 export class MenuComponent implements OnInit {
 	isDarkMode: boolean = false;
+	mainCategoriesOptions: SelectModel[];
+	categoriesOptions: Categories;
+
 
 	constructor(
-		private _themeService: ThemeService
+		private _themeService: ThemeService,
+		private _dropdownService: DropdownService,
 	) { }
 
 	ngOnInit(): void {
+		this.getAllCategoriesOptions();
+	}
+
+	private getAllCategoriesOptions(): void {
+		this._dropdownService.getAllCategoriesData().subscribe(
+			option => {
+				this.categoriesOptions = option;
+				console.log(option);
+			}
+		)
+		this._dropdownService.getAllCategoriesType().subscribe(
+			option => {
+				this.mainCategoriesOptions = option;
+			}
+		)
 	}
 
 	toggleThemeMode(): void {

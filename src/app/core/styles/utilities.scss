@@ -14,3 +14,33 @@ a.inherit {
 // .p-inputtext-lg {
 // 	width: 100%;
 // }
+
+.submenu-dropdown {
+	.p-dropdown {
+		background-color: transparent;
+		border: none;
+	}
+
+	.p-dropdown .p-dropdown-trigger {
+		width: 1rem;
+	}
+
+	.pi {
+		font-size: 0.7rem;
+	}
+
+	span:focus-visible,
+	span:focus-within,
+	span:focus {
+		outline: none;
+	}
+
+	.p-dropdown:not(.p-disabled).p-focus {
+		border: none;
+		box-shadow: none;
+	}
+
+	.p-dropdown-panel .p-dropdown-items .p-dropdown-item {
+		padding: 1rem;
+	}
+}

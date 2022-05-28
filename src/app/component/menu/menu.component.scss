@@ -120,3 +120,18 @@ $top-menu-height: 4rem;
 .p-inputswitch {
 	z-index: -1 !important;
 }
+
+.categories-menu {
+	width: 100%;
+	padding-inline: $padding-inline-width;
+	height: 4rem;
+	background-color: var(--surface-200);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.menu {
+		width: max-content;
+		margin-inline: inherit;
+	}
+}
